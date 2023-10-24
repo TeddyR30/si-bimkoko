@@ -236,10 +236,13 @@
                 <button style="background-color: #434343; color: #3DA3C3;" class="btn btn-dark btn-sm mb-0 me-3" target="_blank" href="https://www.creative-tim.com/builder?ref=navbar-soft-ui-dashboard">Si-Bimkoko</button>
             </li>
             <li class="nav-item d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
-                <i class="fa fa-user me-sm-1"></i>
-                <span class="d-sm-inline d-none">Sign In</span>
-              </a>
+              <form action="{{url('logout')}}" class="nav-link text-body font-weight-bold px-0" method="POST">
+                @csrf
+                <button>
+                    <i class="fa fa-user me-sm-1"></i>
+                <span class="d-sm-inline d-none" >Log Out</span>
+                </button>
+              </form>
             </li>
             <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
@@ -330,60 +333,48 @@
       </div>
     </nav>
     <!-- End Navbar -->
-    <div class="container-fluid py-4">
+    <div class="flex-container py-4">
         @yield('content')
-        <div class="row">
-            <div class="col-12">
-              <div class="card mb-4">
-                <div class="card-header pb-0">
-                  <h6>PENGGUNA ONLINE</h6>
-                </div>
-                <div class="card-body px-0 pt-0 pb-2">
-                  <div class="table-responsive p-0">
-                    <table class="table align-items-center mb-0">
-                      <thead>
-                        <tr>
-                          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Users</th>
-                          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Email</th>
-                          <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Role</th>
-                          <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Deskripsi</th>
-                          <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
-                          <th class="text-secondary opacity-7"></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {{-- @foreach ($users as $user )
-                        <tr>
-                            <td>{{ $user->nama }}</td>
-                            <td>{{ $user->email }}</td>
-                            <td>{{ $user->role }}</td>
-                            <td>{{ $user->deskripsi }}</td>
-                            <td>{{ $user->status }}</td>
-                          </tr>
-                        @endforeach --}}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
+        <h2 style="color: #3DA3D3; font-family: Poppins;">SI-BIMKOKO</h2>
+        <div class="py-2" style="color: black; font-size: 30px; font-family: Poppins; font-weight: 600; word-wrap: break-word">Solusi Pintar Bimbingan Konseling dan Konsultasi Online</div>
+        <div style="color: #434343; font-size: 18px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Si-Bimkoko merupakan platform yang didedikasikan untuk Layanan Bimbingan <br/>Konseling dan Konsultasi di Sekolah. Si-Bimkoko menyediakan fitur <br/>yang akan menjadi alat bantu Konselor Sekolah/Guru Bimbingan <br/>Konseling dan Konsultasi secara online.</div>
+        <div class="flex-container py-2">
+            <div style="width: 22%; min-width: 200px; background-color: #ffffff; color: #3DA3D3; border-radius: 10px; text-align: left; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" class="card" id="penggunaCard">
+                <p style="font-size: 50px; text-align: center"><span>100</span></p>
+                <h6 style="text-align: center">Pengguna</h6>
+            </div>
+
+            <div style="width: 22%; min-width: 200px; background-color: #ffffff; color: #3DA3D3; border-radius: 10px; text-align: left; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" class="card" id="bimbinganCard">
+                <p style="font-size: 50px; text-align: center"><span>50</span></p>
+                <h6 style="text-align: center">Bimbingan</h6>
+            </div>
+
+            <div style="width: 22%; min-width: 200px; background-color: #ffffff; color: #3DA3D3; border-radius: 10px; text-align: left; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" class="card" id="konselingCard">
+                <p style="font-size: 50px; text-align: center"><span>75</span></p>
+                <h6 style="text-align: center">Konseling</h6>
+            </div>
+
+            <div style="width: 22%; min-width: 200px; background-color: #ffffff; color: #3DA3D3; border-radius: 10px; text-align: left; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" class="card" id="konsultasiCard">
+                <p style="font-size: 50px; text-align: center"><span>120</span></p>
+                <h6 style="text-align: center">Konsultasi</h6>
             </div>
         </div>
-        <h6 style="align-content: center; font-size: 20px; padding: 20px; margin: 10px; ">Fitur Kami, Berbagai Macam Aktivitas di Si-Bimkoko : </h6>
+        <h6 class="py-2" style="color: black; font-size: 30px; font-family: Poppins; font-weight: 600; text-align: center">Fitur Kami : </h6>
         <div>
     <!-- Kartu Fitur Utama 1 -->
-    <span style="width: 30%; min-width: 200px; background-color: #ffffff; color: #3DA3D3; border-radius: 10px; text-align: left; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" onclick="showMessage('Bimbingan : Bimbingan Karir & Lainnya')">
+    <span style="width: 30%; min-width: 200px; background-color: #ffffff; color: #3DA3D3; border-radius: 10px; text-align: center; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" onclick="showMessage('Bimbingan : Bimbingan Karir & Lainnya')">
         <h4>Bimbingan</h4>
         <p>Bimbingan Karir & Lainnya</p>
     </span>
 
     <!-- Kartu Fitur Utama 2 -->
-    <span style="width: 30%; min-width: 200px; background-color: #ffffff; color: #3DA3D3; border-radius: 10px; text-align: left; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" onclick="showMessage('Konseling : Konseling Permasalahan & Lainnya')">
+    <span style="width: 30%; min-width: 200px; background-color: #ffffff; color: #3DA3D3; border-radius: 10px; text-align: center; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" onclick="showMessage('Konseling : Konseling Permasalahan & Lainnya')">
         <h4>Konseling</h4>
         <p>Konseling Permasalahan & Lainnya</p>
     </span>
 
     <!-- Kartu Fitur Utama 3 -->
-    <span style="width: 30%; min-width: 200px; background-color: #ffffff; color: #3DA3D3; border-radius: 10px; text-align: left; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" onclick="showMessage('Konsultasi Individu & Lainnya')">
+    <span style="width: 30%; min-width: 200px; background-color: #ffffff; color: #3DA3D3; border-radius: 10px; text-align: center; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" onclick="showMessage('Konsultasi Individu & Lainnya')">
         <h4>Konsultasi</h4>
         <p>Konsultasi Individu & Lainnya</p>
     </span>
@@ -489,185 +480,6 @@
   <script src="{{ asset('js/plugins/perfect-scrollbar.min.js')}}"></script>
   <script src="{{ asset('js/plugins/smooth-scrollbar.min.js')}}"></script>
   <script src="{{ asset('js/plugins/chartjs.min.js')}}"></script>
-  <script>
-    var ctx = document.getElementById("chart-bars").getContext("2d");
-
-    new Chart(ctx, {
-      type: "bar",
-      data: {
-        labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        datasets: [{
-          label: "Sales",
-          tension: 0.4,
-          borderWidth: 0,
-          borderRadius: 4,
-          borderSkipped: false,
-          backgroundColor: "#fff",
-          data: [450, 200, 100, 220, 500, 100, 400, 230, 500],
-          maxBarThickness: 6
-        }, ],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false,
-          }
-        },
-        interaction: {
-          intersect: false,
-          mode: 'index',
-        },
-        scales: {
-          y: {
-            grid: {
-              drawBorder: false,
-              display: false,
-              drawOnChartArea: false,
-              drawTicks: false,
-            },
-            ticks: {
-              suggestedMin: 0,
-              suggestedMax: 500,
-              beginAtZero: true,
-              padding: 15,
-              font: {
-                size: 14,
-                family: "Open Sans",
-                style: 'normal',
-                lineHeight: 2
-              },
-              color: "#fff"
-            },
-          },
-          x: {
-            grid: {
-              drawBorder: false,
-              display: false,
-              drawOnChartArea: false,
-              drawTicks: false
-            },
-            ticks: {
-              display: false
-            },
-          },
-        },
-      },
-    });
-
-
-    var ctx2 = document.getElementById("chart-line").getContext("2d");
-
-    var gradientStroke1 = ctx2.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke1.addColorStop(1, 'rgba(203,12,159,0.2)');
-    gradientStroke1.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-    gradientStroke1.addColorStop(0, 'rgba(203,12,159,0)'); //purple colors
-
-    var gradientStroke2 = ctx2.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke2.addColorStop(1, 'rgba(20,23,39,0.2)');
-    gradientStroke2.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-    gradientStroke2.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
-
-    new Chart(ctx2, {
-      type: "line",
-      data: {
-        labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        datasets: [{
-            label: "Mobile apps",
-            tension: 0.4,
-            borderWidth: 0,
-            pointRadius: 0,
-            borderColor: "#cb0c9f",
-            borderWidth: 3,
-            backgroundColor: gradientStroke1,
-            fill: true,
-            data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
-            maxBarThickness: 6
-
-          },
-          {
-            label: "Websites",
-            tension: 0.4,
-            borderWidth: 0,
-            pointRadius: 0,
-            borderColor: "#3A416F",
-            borderWidth: 3,
-            backgroundColor: gradientStroke2,
-            fill: true,
-            data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
-            maxBarThickness: 6
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false,
-          }
-        },
-        interaction: {
-          intersect: false,
-          mode: 'index',
-        },
-        scales: {
-          y: {
-            grid: {
-              drawBorder: false,
-              display: true,
-              drawOnChartArea: true,
-              drawTicks: false,
-              borderDash: [5, 5]
-            },
-            ticks: {
-              display: true,
-              padding: 10,
-              color: '#b2b9bf',
-              font: {
-                size: 11,
-                family: "Open Sans",
-                style: 'normal',
-                lineHeight: 2
-              },
-            }
-          },
-          x: {
-            grid: {
-              drawBorder: false,
-              display: false,
-              drawOnChartArea: false,
-              drawTicks: false,
-              borderDash: [5, 5]
-            },
-            ticks: {
-              display: true,
-              color: '#b2b9bf',
-              padding: 20,
-              font: {
-                size: 11,
-                family: "Open Sans",
-                style: 'normal',
-                lineHeight: 2
-              },
-            }
-          },
-        },
-      },
-    });
-  </script>
-  <script>
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav')) {
-      var options = {
-        damping: '0.5'
-      }
-      Scrollbar.init(document.querySelector('#sidenav'), options);
-    }
-  </script>
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
