@@ -36,7 +36,7 @@
         <div class="collapse navbar-collapse  w-100 " id="sidenav-collapse-main" style="background-color: #434343; color: #3DA3C3;">
       <ul class="navbar-nav" style="background-color: #434343; color:#3DA3C3, #2F88FF1F, #2F88FF1F; overflow-y:hidden">
         <li style="background-color: #3DA3C3">
-          <a class="nav-link  active" href="../pages/dashboard.html">
+          <a class="nav-link  active" href="http://127.0.0.1:8000/">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-blue text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>Dashboard</title>
@@ -56,7 +56,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/tables.html">
+          <a class="nav-link  " href="/profile">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>Profile</title>
@@ -72,11 +72,11 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1" style="color: #FFFFFF">Profile</span>
+            <span class="nav-link-text ms-1" style="color: #FFFFFF" >Profile</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/billing.html">
+          <a class="nav-link  " href="/bimbingan">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>Bimbingan</title>
@@ -238,10 +238,9 @@
             <li class="nav-item d-flex align-items-center">
               <form action="{{url('logout')}}" class="nav-link text-body font-weight-bold px-0" method="POST">
                 @csrf
-                <button>
-                    <i class="fa fa-user me-sm-1"></i>
-                <span class="d-sm-inline d-none" >Log Out</span>
-                </button>
+                <div>
+                <button style="background-color: #434343; color: #3DA3C3; border: 1px" class="btn btn-white btn-sm mb-0 me-3">Log Out</button>
+                </div>
               </form>
             </li>
             <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
@@ -335,30 +334,25 @@
     <!-- End Navbar -->
     <div class="flex-container py-4">
         @yield('content')
+
         <h2 style="color: #3DA3D3; font-family: Poppins;">SI-BIMKOKO</h2>
         <div class="py-2" style="color: black; font-size: 30px; font-family: Poppins; font-weight: 600; word-wrap: break-word">Solusi Pintar Bimbingan Konseling dan Konsultasi Online</div>
         <div style="color: #434343; font-size: 18px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Si-Bimkoko merupakan platform yang didedikasikan untuk Layanan Bimbingan <br/>Konseling dan Konsultasi di Sekolah. Si-Bimkoko menyediakan fitur <br/>yang akan menjadi alat bantu Konselor Sekolah/Guru Bimbingan <br/>Konseling dan Konsultasi secara online.</div>
-        <div class="flex-container py-2">
-            <div style="width: 22%; min-width: 200px; background-color: #ffffff; color: #3DA3D3; border-radius: 10px; text-align: left; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" class="card" id="penggunaCard">
-                <p style="font-size: 50px; text-align: center"><span>100</span></p>
-                <h6 style="text-align: center">Pengguna</h6>
+        <div style=" border: 2px solid: #F2F2F2; width: 98%; height: 88%; background: rgba(141.31, 144.54, 161.50, 0.21); box-shadow: 12px 15px 30px rgba(0, 0, 0, 0.10) inset; border-radius: 20px">
+            <div style="width: 22%; min-width: 200px;  color: #3DA3D3; border-radius: 10px; text-align: left; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" class="flex-container" id="penggunaCard">
+                <div style="font-size: 50px; text-align: center; flex-direction: row"><span>100</span><h6 style="text-align: center">Pengguna</h6></div>
             </div>
-
-            <div style="width: 22%; min-width: 200px; background-color: #ffffff; color: #3DA3D3; border-radius: 10px; text-align: left; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" class="card" id="bimbinganCard">
-                <p style="font-size: 50px; text-align: center"><span>50</span></p>
-                <h6 style="text-align: center">Bimbingan</h6>
+            <div style="width: 22%; min-width: 200px;  color: #3DA3D3; border-radius: 10px; text-align: left; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" class="flex-container" id="bimbinganCard">
+                <div style="font-size: 50px; text-align: center; flex-direction: row"><span>50</span><h6 style="text-align: center">Bimbingan</h6></div>
             </div>
-
-            <div style="width: 22%; min-width: 200px; background-color: #ffffff; color: #3DA3D3; border-radius: 10px; text-align: left; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" class="card" id="konselingCard">
-                <p style="font-size: 50px; text-align: center"><span>75</span></p>
-                <h6 style="text-align: center">Konseling</h6>
+            <div style="width: 22%; min-width: 200px;  color: #3DA3D3; border-radius: 10px; text-align: left; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" class="flex-container" id="konselingCard">
+                <div style="font-size: 50px; text-align: center; flex-direction: row"><span>75</span><h6 style="text-align: center">Konseling</h6></div>
             </div>
-
-            <div style="width: 22%; min-width: 200px; background-color: #ffffff; color: #3DA3D3; border-radius: 10px; text-align: left; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" class="card" id="konsultasiCard">
-                <p style="font-size: 50px; text-align: center"><span>120</span></p>
-                <h6 style="text-align: center">Konsultasi</h6>
+            <div style="width: 22%; min-width: 200px;  color: #3DA3D3; border-radius: 10px; text-align: left; padding: 20px; margin: 10px; display: inline-block; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)'" class="flex-container" id="konsultasiCard">
+                <div style="font-size: 50px; text-align: center; flex-direction: row"><span>120</span><h6 style="text-align: center">Konsultasi</h6></div>
             </div>
         </div>
+
         <h6 class="py-2" style="color: black; font-size: 30px; font-family: Poppins; font-weight: 600; text-align: center">Fitur Kami : </h6>
         <div>
     <!-- Kartu Fitur Utama 1 -->
@@ -474,6 +468,7 @@
       </div>
     </div>
   </div>
+
   <!--   Core JS Files   -->
   <script src="{{ asset('js/core/popper.min.js')}}"></script>
   <script src="{{ asset('js/core/bootstrap.min.js')}}"></script>

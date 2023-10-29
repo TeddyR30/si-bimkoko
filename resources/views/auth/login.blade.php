@@ -63,7 +63,7 @@
               </ul>
               <ul class="navbar-nav d-lg-flex d-none">
                 <li class="nav-item d-flex align-items-center">
-                  <a class="btn btn-outline-primary btn-sm mb-0 me-2" target="_blank" href="/master">SI-BIMKOKO</a>
+                  <a class="btn btn-secondary btn-sm mb-0 me-2" target="_blank" href="http://127.0.0.1:8000/" style="background-color: #3DA3C3; text-color: #FFFFFF">SI-BIMKOKO</a>
                 </li>
               </ul>
             </div>
@@ -81,7 +81,7 @@
           <div class="col-lg-4 col-md-8 col-12 mx-auto">
             <div class="card z-index-0 fadeIn3 fadeInBottom">
               <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                <div class="shadow-info border-radius-lg py-3 pe-1" style="background-color: #3DA3C3">
                   <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Log In</h4>
                   <h5 class="text-white font-weight-bolder text-center mt-2 mb-0">SI-BIMKOKO</h5>
                   {{-- <div class="row mt-3">
@@ -129,12 +129,13 @@
                     <label class="form-check-label mb-0 ms-3" for="rememberMe">Remember me</label>
                   </div>
                   <div class="text-center">
-                    <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Log In</button>
+                    <button type="submit" class="btn btn-secondary btn-sm w-100 my-4 mb-2" style="background-color: #3DA3C3; text-color: #FFFFFF" href="'/profile">Log In</button>
+
                   </div>
                   <a href="/forgot-password">Lupa Password ?</a>
                   <p class="mt-4 text-sm text-center">
                     Belum memiliki Akun?
-                    <a href="/register" class="text-primary text-gradient font-weight-bold">Register</a>
+                    <a href="/register" class="text-gradient font-weight-bold" style="background-color: #3DA3C3">Register</a>
                   </p>
                 </form>
               </div>

@@ -60,7 +60,7 @@
                     </ul>
                     <ul class="navbar-nav d-lg-flex d-none">
                       <li class="nav-item d-flex align-items-center">
-                        <a class="btn btn-outline-primary btn-sm mb-0 me-2" target="_blank" href="/master">SI-BIMKOKO</a>
+                        <a class="btn btn-secondary btn-sm mb-0 me-2" target="_blank" href="http://127.0.0.1:8000/" style="background-color: #3DA3C3; text-color: #FFFFFF">SI-BIMKOKO</a>
                       </li>
                     </ul>
                   </div>
@@ -85,7 +85,7 @@
               <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5">
                 <div class="card card-plain">
                   <div class="card-header">
-                    <div class="bg-gradient-primary shadow-primary border-radius-lg py-2 pe-1">
+                    <div class="shadow-info border-radius-lg py-2 pe-1" style="background-color: #3DA3C3">
                         <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Register</h4>
                         <h5 class="text-white font-weight-bolder text-center mt-2 mb-0">SI-BIMKOKO</h5>
                   </div>
@@ -134,15 +134,15 @@
                         </label>
                       </div> --}}
                       <div class="text-center">
-                        <button type="submit" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Register</button>
-                        <a href="/127.0.0.1:8000">
+                        <a type="submit" class="btn btn-secondary btn-sm mb-0 me-2 mt-4 w-100" style="background-color: #3DA3C3; text-color: #FFFFFF">Register</a>
+                        <a href="/logins">
                       </div>
                     </form>
                   </div>
                   <div class="card-footer text-center pt-0 px-lg-2 px-1">
                     <p class="mb-2 text-sm mx-auto">
                       Sudah Memiliki Akun?
-                      <a href="/logins" class="text-primary text-gradient font-weight-bold">Log In</a>
+                      <a href="/logins" class="text-gradient font-weight-bold" style="background-color: #3DA3C3">Log In</a>
                     </p>
                   </div>
                 </div>
