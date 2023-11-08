@@ -1,6 +1,9 @@
 <?php
 
+<<<<<<< HEAD
 use App\Http\Controllers\ProfileController;
+=======
+>>>>>>> df6467ee02f04fec18ce873eba113e91f881ec32
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< HEAD
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -37,3 +41,5 @@ Route::get('/landing_page', function () {
 });
 
 require __DIR__.'/auth.php';
+=======
+>>>>>>> df6467ee02f04fec18ce873eba113e91f881ec32

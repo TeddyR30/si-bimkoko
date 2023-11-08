@@ -168,7 +168,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+<<<<<<< HEAD
         App\Providers\FortifyServiceProvider::class,
+=======
+>>>>>>> df6467ee02f04fec18ce873eba113e91f881ec32
     ])->toArray(),
 
     /*
