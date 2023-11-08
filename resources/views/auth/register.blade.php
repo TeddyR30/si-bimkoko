@@ -47,13 +47,13 @@
                       </li>
                       <li class="nav-item">
                         <a class="nav-link me-2" href="/register">
-                          <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
+                          <i class="fa fa-user-circle opacity-6 text-dark me-1"></i>
                           Register
                         </a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link me-2" href="/logins">
-                          <i class="fas fa-key opacity-6 text-dark me-1"></i>
+                          <i class="fa fa-key opacity-6 text-dark me-1"></i>
                           Log In
                         </a>
                       </li>
@@ -79,13 +79,13 @@
           <div class="container my-auto">
             <div class="row">
               <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 start-0 text-center justify-content-center flex-column">
-                <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center" style="background-image: url('../assets/img/illustrations/illustration-signup.jpg'); background-size: cover;">
-                </div>
+                <img class="justify-content-center" style="border-radius: 10px; margin 0 auto" src="{{('img/LOGO_SI-BIMKOKO.png')}}">
+              </div>
               </div>
               <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5">
                 <div class="card card-plain">
                   <div class="card-header">
-                    <div class="shadow-info border-radius-lg py-2 pe-1" style="background-color: #3DA3C3">
+                    <div class="shadow-info py-2 pe-1" style="background-color: #3DA3C3; border-radius: 10px">
                         <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Register</h4>
                         <h5 class="text-white font-weight-bolder text-center mt-2 mb-0">SI-BIMKOKO</h5>
                   </div>
@@ -123,20 +123,16 @@
                             <label class="font-label">Konfirmasi Password</label>
                             <input type="password" name="password_confirmation" class="form-control" placeholder="Masukkan Konfirmasi Password">
                       </div>
-                      <div class="form-group">
-                        <label class="form-label">Role</label>
-                        <input type="enum" name="role" class="form-control" placeholder="Masukan Role (Admin/Konselor/Konseli)">
-                      </div>
-                      {{-- <div class="form-check form-check-info text-start ps-0">
+                      <div class="form-check form-check-info text-start ps-0">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
                         <label class="form-check-label" for="flexCheckDefault">
                           I agree the <a href="javascript:;" class="text-dark font-weight-bolder">Terms and Conditions</a>
                         </label>
-                      </div> --}}
-                      <div class="text-center">
-                        <a type="submit" class="btn btn-secondary btn-sm mb-0 me-2 mt-4 w-100" style="background-color: #3DA3C3; text-color: #FFFFFF">Register</a>
-                        <a href="/logins">
                       </div>
+                      <div class="text-center">
+                        <button type="submit" class="btn btn-secondary btn-sm mb-0 me-2 mt-4 w-100" style="background-color: #3DA3C3; text-color: #FFFFFF">Register</button>
+                    </div>
+
                     </form>
                   </div>
                   <div class="card-footer text-center pt-0 px-lg-2 px-1">

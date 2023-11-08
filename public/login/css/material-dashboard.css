@@ -21,6 +21,61 @@
    * Copyright 2011-2022 Twitter, Inc.
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    */
+   body {
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.jumbotron {
+    background-image: url('background.jpg'); /* Ganti dengan gambar latar belakang Anda */
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 150px 0;
+}
+
+.jumbotron h1 {
+    font-size: 48px;
+}
+
+.jumbotron p {
+    font-size: 24px;
+}
+
+.feature-icon {
+    font-size: 36px;
+    color: #007bff;
+}
+
+.feature-title {
+    font-size: 24px;
+}
+
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
 :root {
   --bs-blue: #63B3ED;
   --bs-indigo: #596CFF;
@@ -751,7 +806,7 @@ progress {
   .container-lg,
   .container-xl,
   .container-xxl {
-    max-width: 1320px;
+    max-width: none;
   }
 }
 
@@ -766,11 +821,11 @@ progress {
 }
 
 .row>* {
-  flex-shrink: 0;
+  flex-shrink: 100%;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
+  /* padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5); */
   margin-top: var(--bs-gutter-y);
 }
 

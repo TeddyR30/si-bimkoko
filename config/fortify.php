@@ -74,7 +74,7 @@ return [
     |
     */
 
-    'home' => RouteServiceProvider::HOME,
+    'dashboard' => RouteServiceProvider::HOME,
 
     /*
     |--------------------------------------------------------------------------
@@ -156,5 +156,6 @@ return [
             // 'window' => 0,
         ]),
     ],
+
 
 ];

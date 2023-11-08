@@ -8,8 +8,7 @@
 
 @section('content')
 
-  <div class="bg-gray 200">
-    {{-- <div class="card border-0 shadow rounded; container position-absolute z-index-sticky top-0"> --}}
+  <div class="">
         <div class="card-body">
             @if (session('status'))
                 <div class="alert alert-success" role="alert">
@@ -18,7 +17,7 @@
             @endif
         </div>
   </div>
-  <div class="container position-sticky z-index-sticky top-0">
+  <div class="container">
     <div class="row">
       <div class="col-12">
         <!-- Navbar -->
@@ -43,20 +42,20 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link me-2" href="/profile">
+                  <a class="nav-link me-2" href="/profiles">
                     <i class="fa fa-user opacity-6 text-dark me-1"></i>
                     Profile
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link me-2" href="/register">
-                    <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
+                    <i class="fa fa-user-circle opacity-6 text-dark me-1"></i>
                     Register
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link me-2" href="/logins">
-                    <i class="fas fa-key opacity-6 text-dark me-1"></i>
+                    <i class="fa fa-key opacity-6 text-dark me-1"></i>
                     Log In
                   </a>
                 </li>
@@ -74,14 +73,18 @@
     </div>
   </div>
   <main class="main-content  mt-0">
-    <div class="page-header align-items-start min-vh-100" style="background-image: url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');">
-      <span class="mask bg-gradient-dark opacity-6"></span>
+    <div class="page-header align-items-start min-vh-100 " style="background-image: url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80'); height: 100%; background-size: cover; background-position: center; min-height: 100%;">
+        {{-- <div class="page-header align-items-start min-vh-100 " style="background: radial-gradient(circle, rgba(250, 250, 250, 1), rgba(204, 223, 245, 1)); height: 100%; background-size: cover; background-position: center; min-height: 100%;"> --}}
+        <span class="mask bg-gradient-dark opacity-6"></span>
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-4 col-md-8 col-12 mx-auto">
             <div class="card z-index-0 fadeIn3 fadeInBottom">
               <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                 <div class="shadow-info border-radius-lg py-3 pe-1" style="background-color: #3DA3C3">
+                    <div style="text-align: center">
+                        <img src="{{ asset('img/apple-icon.png')}}" alt="Logo apple-icon" width="70px" height="70px" style="">
+                      </div>
                   <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Log In</h4>
                   <h5 class="text-white font-weight-bolder text-center mt-2 mb-0">SI-BIMKOKO</h5>
                   {{-- <div class="row mt-3">
